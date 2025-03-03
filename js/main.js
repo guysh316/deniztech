@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function() {
     // راه‌اندازی Swiper برای پیشنهاد شگفت‌انگیز
     var swiper = new Swiper('.specialSwiper', {
-        slidesPerView: 5,  // نمایش 5 اسلاید همزمان
+        slidesPerView: 7,  // نمایش 5 اسلاید همزمان
         slidesPerGroup: 1, // حرکت تک به تک
         centeredSlides: false, // غیرفعال‌سازی اسلاید وسط‌چین
         spaceBetween: 10,  // کاهش فاصله بین آیتم‌ها
@@ -71,12 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
+            370:{
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
             640: { // تبلت
                 slidesPerView: 2,
                 spaceBetween: 10,
             },
             1024: { // دسکتاپ
-                slidesPerView: 5,
+                slidesPerView: 6,
                 spaceBetween: 15,
             }
         }
@@ -137,6 +141,10 @@ var swiper = new Swiper(".mySwiper", {
     breakpoints: {
         320: { // موبایل کوچک
             slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        370:{
+            slidesPerView: 2,
             spaceBetween: 10,
         },
         640: { // تبلت
