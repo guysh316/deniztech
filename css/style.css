@@ -821,7 +821,7 @@ button.next {
 }
 
 .new-products .header-container h2 {
-    font-size: 24px;
+    font-size: 19px;
     display: flex;
     align-items: center;
     color: #333;
@@ -1413,5 +1413,15 @@ footer {
 
 @media (max-width: 480px) {
 
+    .customer-review .review-text {
+        color: #555;
+        font-size: 9px;
+    }
+
+    .comparison-title {
+        font-size: 17px;
+        width: 85%;
+        margin-right: 30px;
+    }
     
 }
