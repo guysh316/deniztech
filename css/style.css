@@ -889,7 +889,7 @@ button.next {
 
 .customer-review .review-text {
     color: #555;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .new-products .view-all-container {
@@ -1320,7 +1320,10 @@ footer {
     .spec-item{
         font-size: 15px;
     }
-
+    .customer-review .review-text {
+    color: #555;
+    font-size: 10px;
+    }
 
 
 
