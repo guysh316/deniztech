@@ -648,7 +648,6 @@ button.next {
 
 .tum {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
@@ -889,7 +888,7 @@ button.next {
 
 .customer-review .review-text {
     color: #555;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .new-products .view-all-container {
@@ -1266,10 +1265,7 @@ footer {
 
 
 
-    .tum{
-        width: 94%;
-        padding: 9px;
-    }
+
     .banner img{
         width: 115px;
         height: auto;
@@ -1320,10 +1316,7 @@ footer {
     .spec-item{
         font-size: 15px;
     }
-    .customer-review .review-text {
-    color: #555;
-    font-size: 13px;
-    }
+
 
 
 
@@ -1422,7 +1415,7 @@ footer {
 }
 
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
 
     .customer-review .review-text {
         color: #555;
@@ -1447,9 +1440,27 @@ footer {
     
 }
 
-    @media (max-width: 380px) {
-    .customer-review .review-text {
-    color: #555;
-    font-size: 9px;
+
+@media (max-width: 500px) {
+
+
+    .tum {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
     }
+    
+
+}
+
+@media (min-width: 1200px){
+
+    .discounted-price {
+        color: #e74c3c;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
 }
