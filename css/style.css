@@ -1322,7 +1322,7 @@ footer {
     }
     .customer-review .review-text {
     color: #555;
-    font-size: 9px;
+    font-size: 13px;
     }
 
 
@@ -1445,4 +1445,11 @@ footer {
         font-size: 14px;
     }
     
+}
+
+    @media (max-width: 380px) {
+    .customer-review .review-text {
+    color: #555;
+    font-size: 9px;
+    }
 }
