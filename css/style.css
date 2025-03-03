@@ -1235,7 +1235,7 @@ footer {
 
 
     .main-top-slider{
-        height: 240px;
+        height: 285px;
     }
     .main-top-slider button{
         display: none;
@@ -1312,6 +1312,14 @@ footer {
     .phone .minsize{
         font-size: 10px;
     }
+    .comparison-title {
+        font-size: 17px;
+        width: 85%;
+        margin-right: 30px;
+    }
+    .spec-item{
+        font-size: 15px;
+    }
 
 
 
@@ -1320,7 +1328,7 @@ footer {
         display: block;
     }
     .header-section span{
-        font-size: 10px;
+        font-size: 13px;
     }
 
 
@@ -1411,7 +1419,7 @@ footer {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
 
     .customer-review .review-text {
         color: #555;
@@ -1422,6 +1430,16 @@ footer {
         font-size: 17px;
         width: 85%;
         margin-right: 30px;
+    }
+
+    .header-section span{
+        font-size: 10px;
+    }
+    .main-top-slider{
+        height: 240px;
+    }
+    .spec-item{
+        font-size: 14px;
     }
     
 }
