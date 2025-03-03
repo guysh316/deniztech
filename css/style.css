@@ -1316,6 +1316,10 @@ footer {
     .spec-item{
         font-size: 15px;
     }
+    .customer-review .review-text {
+        color: #555;
+        font-size: 11px;
+    }
 
 
 
