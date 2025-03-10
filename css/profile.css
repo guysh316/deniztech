@@ -1095,7 +1095,7 @@ table tbody tr:hover {
     
 
     #message-section .card{
-        width: 295px;
+        width: auto;
     }
 
 
@@ -1106,3 +1106,12 @@ table tbody tr:hover {
     
 
 }
+@media (min-width: 420px){
+
+    .header-section span {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+}
+
