@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         moneybag: document.getElementById("moneybag-btn"),
         buy: document.getElementById("buy-btn"),
         messages: document.getElementById("message-btn"), 
-        ticket: document.getElementById("ticket-btn"),
         settings: document.getElementById("setting-btn") 
     };
 
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         moneybag: document.getElementById("moneybag-section"),
         buy: document.getElementById("buy-section"),
         messages: document.getElementById("message-section"), 
-        ticket: document.getElementById("ticket-section"),
         settings: document.getElementById("setting-section") 
     };
 
