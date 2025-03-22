@@ -6,7 +6,7 @@
     <title> فروشگاه اینترنتی دنیزتچ </title>
 
     <!-- CSS FILE -->
-    <link rel="stylesheet" href="css/demo-1.css">
+    <link rel="stylesheet" href="css/demo-2.css">
 
     <!-- Favicons -->
   <link href="img/favicon/favicn.jpg" rel="icon">
@@ -315,8 +315,6 @@
     </div>
 </header>
 
-
-
 <div class="main-top-slider">
     <div class="slide active">
         <img src="img/first page/image2.gif" alt="Slide 1" class="desktop-image">
@@ -335,12 +333,34 @@
 </div>
 
 
-<div class="special-products">
-    <div class="header-container">
-        <h2 class="header-title"> محصولات ویژه </h2>
-        <div class="timer">
-            <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+
+<div class="category-container">
+    <div class="swiper categorySwiper">
+        <div class="swiper-wrapper">
+            <!-- دسته بندی موبایل -->
+            <div class="swiper-slide"><img src="img/icon/samsung-svgrepo-com.svg" alt="سامسونگ"><span>سامسونگ</span></div>
+            <div class="swiper-slide"><img src="img/icon/apple-svgrepo-com.svg" alt="اپل"><span>اپل</span></div>
+            <div class="swiper-slide"><img src="img/icon/xiaomi-svgrepo-com.svg" alt="شیائومی"><span>شیائومی</span></div>
+            <div class="swiper-slide"><img src="img/icon/huawei-svgrepo-com.svg" alt="هواوی"><span>هواوی</span></div>
+            <div class="swiper-slide"><img src="img/icon/nokia-svgrepo-com.svg" alt="نوکیا"><span>نوکیا</span></div>
+
+            <!-- دسته بندی لوازم جانبی -->
+            <div class="swiper-slide"><img src="img/icon/headphone-svgrepo-com.svg" alt="هندزفری"><span>هندزفری</span></div>
+            <div class="swiper-slide"><img src="img/icon/mobile-alt-1-svgrepo-com.svg" alt="قاب"><span>قاب</span></div>
+            <div class="swiper-slide"><img src="img/icon/electronic-powerbank-electric-svgrepo-com.svg" alt="پاوربانک"><span>پاوربانک</span></div>
+            <div class="swiper-slide"><img src="img/icon/charger-svgrepo-com.svg" alt="کابل شارژ"><span>کابل شارژ</span></div>
+            <div class="swiper-slide"><img src="img/icon/laptop-shield-svgrepo-com.svg" alt="گلس محافظ"><span>گلس محافظ</span></div>
         </div>
+    </div>
+</div>
+
+
+
+
+<div class="container2">
+    <h2>پیشنهاد ویژه</h2>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="product-slider"></div>
         <div class="swiper-button-prev custom-button">
             <img src="img/icon/right-circle-svgrepo-com (1).svg"/>
         </div>
@@ -348,156 +368,8 @@
             <img src="img/icon/left-circle-svgrepo-com.svg"/>
         </div>
     </div>
-    <div class="swiper specialSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">12%</div>
-                    </div>
-                    <img src="img/first page/s23.jpeg" alt="Samsung S32">
-                    <div class="product-info">
-                        <h3>گوشی سامسونگ مدل S32</h3>
-                        <p class="original-price">۳۹,۵۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۳۴,۷۰۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">8%</div>
-                    </div>
-                    <img src="img/first page/airpad iphone.jpeg" alt="AirPods Pro">
-                    <div class="product-info">
-                        <h3>ایرپاد اپل مدل Pro</h3>
-                        <p class="original-price">۹,۵۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۸,۷۴۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">10%</div>
-                    </div>
-                    <img src="img/first page/Galaxy Watch6 Classic.jpeg" alt="Samsung Watch">
-                    <div class="product-info">
-                        <h3>ساعت هوشمند سامسونگ</h3>
-                        <p class="original-price">۷,۸۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۷,۰۲۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">15%</div>
-                    </div>
-                    <img src="img/first page/powerbank xiaomi.jpeg" alt="Xiaomi Power Bank">
-                    <div class="product-info">
-                        <h3>پاوربانک شیائومی ۲۰۰۰۰mAh</h3>
-                        <p class="original-price">۲,۶۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۲,۲۱۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">18%</div>
-                    </div>
-                    <img src="img/first page/iphone14.jpeg" alt="iPhone 14">
-                    <div class="product-info">
-                        <h3>گوشی آیفون ۱۴ پرو</h3>
-                        <p class="original-price">۶۷,۰۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۵۴,۹۴۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">14%</div>
-                    </div>
-                    <img src="img/first page/cable sharzh.jpeg" alt="Anker Charger">
-                    <div class="product-info">
-                        <h3>شارژر دیواری انکر</h3>
-                        <p class="original-price">۳,۲۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۲,۷۵۲,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>    
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">10%</div>
-                    </div>
-                    <img src="img/first page/Galaxy Buds2 Pro.jpeg" alt="Samsung Buds">
-                    <div class="product-info">
-                        <h3>هدفون بلوتوثی سامسونگ</h3>
-                        <p class="original-price">۴,۵۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۴,۰۵۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>    
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">9%</div>
-                    </div>
-                    <img src="img/first page/watch 2.jpeg" alt="Apple Watch">
-                    <div class="product-info">
-                        <h3>ساعت هوشمند اپل</h3>
-                        <p class="original-price">۹,۲۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۸,۳۷۲,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>    
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">7%</div>
-                    </div>
-                    <img src="img/first page/Huawei Mate 50 Pro.jpeg" alt="Huawei Mate 50 Pro">
-                    <div class="product-info">
-                        <h3>گوشی هواوی Mate 50 Pro</h3>
-                        <p class="original-price">۶۴,۰۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۵۹,۵۲۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>    
-            <div class="swiper-slide">
-                <div class="product-background">
-                    <div class="discount-badge-container">
-                        <i class="fa-solid fa-tags"></i>
-                        <div class="discount-badge">11%</div>
-                    </div>
-                    <img src="img/first page/Galaxy S24 Ultra.jpeg" alt="Samsung S24">
-                    <div class="product-info">
-                        <h3>گوشی سامسونگ S24</h3>
-                        <p class="original-price">۷۴,۰۰۰,۰۰۰ تومان</p>
-                        <p class="discounted-price">۶۵,۸۶۰,۰۰۰ تومان</p>
-                    </div>
-                </div>
-            </div>    
-            <div class="view-all-container">
-                <button class="view-all-btn">
-                    مشاهده همه <img src="img/icon/left-arrow-alt-svgrepo-com.svg"/>
-                </button>
-            </div>
-        </div>
-    </div>
 </div>
+
 
 
 <div class="tum">
@@ -512,217 +384,18 @@
 
 
 
-
-<div class="wwe">
-    <img src="img/icon/category-2-svgrepo-com.svg" alt="Category Icon"><span>دسته بندی</span>
-</div>
-<div class="circle">
-
-        <div class="category">
-            <a href="#"><img src="img/icon/samsung-svgrepo-com.svg"/></a>
-            <span>سامسونگ</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/apple-svgrepo-com.svg"/></a>
-            <span>اپل</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/xiaomi-svgrepo-com.svg"/></a>
-            <span>شیائومی</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/huawei-svgrepo-com.svg"/></a>
-            <span>هواوی</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/nokia-svgrepo-com.svg"/></a>
-            <span>نوکیا</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/headphone-svgrepo-com.svg"/></a>
-            <span>هندزفری</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/smartwatch-svgrepo-com.svg"/></a>
-            <span>ساعت هوشمند</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/mobile-alt-1-svgrepo-com.svg"/></a>
-            <span>قاب و کاور</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/laptop-shield-svgrepo-com.svg"/></a>
-            <span>گلس و محافظ صفحه</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/charger-svgrepo-com.svg"/></a>
-            <span>شارژر و کابل</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/electronic-powerbank-electric-svgrepo-com.svg"/></a>
-            <span>پاوربانک</span>
-        </div>    
-    
-        <div class="category">
-            <a href="#"><img src="img/icon/phone holder.png"/></a>
-            <span>پایه نگهدارنده</span>
-        </div>    
-</div>
-
-
-<div class="new-products">
-    <div class="header-container">
-        <h2 class="icon-img"><img src="img/icon/mobile-alt-1-svgrepo-com.svg"> لوازم جانبی موبایل </h2>
-    </div>
+<div class="container3 special-offer">
+    <h2> محبوب ترین‌ها </h2>
     <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <!-- Product Slides -->
-            <div class="swiper-slide">
-                <img src="img/first page/Galaxy Buds2 Pro.jpeg" alt="Galaxy Buds 2 Pro">
-                <div class="product-info">
-                    <h3> هندزفری بلوتوثی سامسونگ مدل Galaxy Buds 2 Pro </h3>
-                    <p> ۳,۴۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/watch.jpeg" alt="Apple Watch Series 9">
-                <div class="product-info">
-                    <h3> ساعت هوشمند اپل مدل Apple Watch Series 9 </h3>
-                    <p> ۱۰,۹۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Ray-Ban Stories_11zon.jpeg" alt="Ray-Ban Stories">
-                <div class="product-info">
-                    <h3> عینک هوشمند متا مدل Ray-Ban Stories </h3>
-                    <p> ۸,۵۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/MagSafe Charger.jpeg" alt="MagSafe Charger">
-                <div class="product-info">
-                    <h3> شارژر بی‌سیم اپل مدل MagSafe </h3>
-                    <p> ۲,۱۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/JBL Charge 5_11zon.jpeg" alt="JBL Charge 5">
-                <div class="product-info">
-                    <h3> اسپیکر بلوتوثی قابل حمل JBL مدل Charge 5 </h3>
-                    <p> ۴,۷۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Logitech K380_11zon.jpeg" alt="Logitech K380">
-                <div class="product-info">
-                    <h3> کیبورد بی‌سیم لاجیتک مدل K380 </h3>
-                    <p> ۱,۶۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/powerbank xiaomi.jpeg" alt="Anker PowerCore 20000">
-                <div class="product-info">
-                    <h3> پاوربانک انکر مدل PowerCore 20,000mAh </h3>
-                    <p> ۲,۳۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Baseus Gravity Car Mount_11zon.jpeg" alt="Baseus Gravity Car Mount">
-                <div class="product-info">
-                    <h3> پایه نگهدارنده گوشی موبایل بیسوس مدل Gravity Car Mount </h3>
-                    <p> ۹۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Samsung 45W Charger_11zon.jpeg" alt="Samsung 45W Charger">
-                <div class="product-info">
-                    <h3> شارژر سریع سامسونگ ۴۵ وات مدل Super Fast Charger </h3>
-                    <p> ۱,۲۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Oura Smart Ring_11zon.jpeg" alt="Oura Smart Ring">
-                <div class="product-info">
-                    <h3> حلقه هوشمند اورا مدل Oura Smart Ring </h3>
-                    <p> ۶,۹۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Xiaomi Mi Band 8_11zon.jpeg" alt="Xiaomi Mi Band 8">
-                <div class="product-info">
-                    <h3> مچ بند هوشمند شیائومی مدل Mi Band 8 </h3>
-                    <p> ۱,۳۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/PowerDrive 2.jpeg" alt="Anker Car Charger">
-                <div class="product-info">
-                    <h3> شارژر فندکی انکر مدل PowerDrive+ 2 </h3>
-                    <p> ۷۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Backbone One_11zon.jpeg" alt="Backbone One">
-                <div class="product-info">
-                    <h3> کنترلر بازی موبایل Backbone One </h3>
-                    <p> ۴,۲۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Apple Pencil 2_11zon.jpeg" alt="Apple Pencil 2">
-                <div class="product-info">
-                    <h3> قلم هوشمند اپل مدل Apple Pencil 2 </h3>
-                    <p> ۳,۵۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/SanDisk Extreme 1TB_11zon.jpeg" alt="SanDisk Extreme 1TB">
-                <div class="product-info">
-                    <h3> کارت حافظه سن دیسک مدل Extreme 1TB </h3>
-                    <p> ۵,۱۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Spigen MagFit_11zon.jpeg" alt="Spigen MagFit">
-                <div class="product-info">
-                    <h3> پایه نگهدارنده مغناطیسی گوشی اسپیگن مدل MagFit </h3>
-                    <p> ۱,۲۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/UGREEN USB-C Hub_11zon.jpeg" alt="UGREEN USB-C Hub">
-                <div class="product-info">
-                    <h3> هاب USB-C یوگرین مدل ۶ در ۱ </h3>
-                    <p> ۲,۹۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/first page/Logitech MX Anywhere 3_11zon.jpeg" alt="Logitech MX Anywhere 3">
-                <div class="product-info">
-                    <h3> ماوس بی‌سیم لاجیتک مدل MX Anywhere 3 </h3>
-                    <p> ۳,۱۹۹,۰۰۰ تومان </p>
-                </div>
-            </div>
+        <div class="swiper-wrapper" id="product-slider"></div>
+        <div class="swiper-button-prev custom-button">
+            <img src="img/icon/right-circle-svgrepo-com (1).svg"/>
+        </div>
+        <div class="swiper-button-next custom-button">
+            <img src="img/icon/left-circle-svgrepo-com.svg"/>
         </div>
     </div>
-    <div class="view-all-container">
-        <button class="view-all-btn">
-            مشاهده همه <img src="img/icon/left-arrow-alt-svgrepo-com.svg"/>
-        </button>
-    </div>
 </div>
-
-
 
 
 <div class="tum">
@@ -736,116 +409,34 @@
 </div>
 
 
+<section class="customer-reviews">
+    <h2>نظرات مشتریان</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-name">محمد رضایی</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">پشتیبانی عالی، ارسال سریع، خیلی راضی هستم.</p>
+        </div>
 
-<div class="brands-section">
-    <div class="header-container">
-        <h2><i class="fas fa-tags"></i> محبوب‌ترین برندها </h2>
-    </div>
-    <div class="swiper brandsSwiper">
-        <div class="swiper-wrapper">
-            <!-- Brand Slides -->
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/apple-logo-svgrepo-com.svg" alt="apple">
-                <p>Apple</p>
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-name">زهرا احمدی</span>
+                <div class="review-stars">⭐⭐⭐⭐</div>
             </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/samsung-svgrepo-com.svg" alt="samsung">
-                <p>Samsung</p>
+            <p class="review-text">خرید بسیار راحت، بسته‌بندی مناسبی داشت. پیشنهاد می‌کنم.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-name">علی کریمی</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
             </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/xiaomi-1-logo-svgrepo-com.svg" alt="xiaomi">
-                <p>Xiaomi</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/huawei-svgrepo-com.svg" alt="huawei">
-                <p>Huawei</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/oneplus-svgrepo-com.svg" alt="oneplus">
-                <p>OnePlus</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/google-translate-svgrepo-com.svg" alt="google">
-                <p>Google Pixel</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/motorola.png" alt="motorola">
-                <p>Motorola</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/sony-2-logo-svgrepo-com.svg" alt="sony">
-                <p>Sony</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/Anker.svg" alt="anker">
-                <p>Anker</p>
-            </div>
-            <div class="swiper-slide brand-slide">
-                <img src="img/brand-icon/ugreen-seeklogo.png" alt="ugreen">
-                <p>UGREEN</p>
-            </div>
+            <p class="review-text">محصول با کیفیت بود، حتماً پیشنهاد می‌کنم.</p>
         </div>
     </div>
-</div>
-
-
-
-<!-- Blog Section -->
-<div class="blog-section">
-    <div class="header-container">
-        <h2><i class="fas fa-blog"></i> خواندنی ها </h2>
-    </div>
-    <div class="blog-container">
-        <div class="blog-post">
-            <img src="img/first page/mobile-apple.png" alt="Smartphone Trends">
-            <h3> جدیدترین ترندهای موبایل در سال ۲۰۲۴ </h3>
-            <p>در سال ۲۰۲۴ شاهد پیشرفت‌های چشمگیری در طراحی و فناوری موبایل هستیم. از دوربین‌های پیشرفته تا باتری‌های با عمر طولانی‌تر، این مقاله به بررسی ترندهای داغ موبایل می‌پردازد.</p>
-            <a href="">مطالعه بیشتر</a>
-        </div>
-        <div class="blog-post">
-            <img src="img/first page/earpod.jpeg" alt="Wireless Earbuds">
-            <h3> بهترین هندزفری‌های بی‌سیم ۲۰۲۴ </h3>
-            <p>هندزفری‌های بی‌سیم به یکی از محبوب‌ترین لوازم جانبی موبایل تبدیل شده‌اند. در این مقاله به بررسی بهترین مدل‌های سال ۲۰۲۴ از نظر کیفیت صدا، باتری و طراحی می‌پردازیم.</p>
-            <a href="">مطالعه بیشتر</a>
-        </div>
-        <div class="blog-post">
-            <img src="img/first page/charger.jpg" alt="Mobile Accessories">
-            <h3> لوازم جانبی ضروری برای موبایل </h3>
-            <p>از پاوربانک‌های پرسرعت تا قاب‌های ضدضربه، لوازم جانبی می‌توانند تجربه استفاده از موبایل را بهبود بخشند. در این مقاله به معرفی لوازم جانبی ضروری برای موبایل می‌پردازیم.</p>
-            <a href="">مطالعه بیشتر</a>
-        </div>
-    </div>
-</div>
-
-
-<div class="bord-container">
-    <div class="bord">
-        <h1> DenizTech </h1>
-        <p> دنیزتچ مرجع تخصصی خرید موبایل و لوازم جانبی با بهترین قیمت و کیفیت است. ما با ارائه محصولات متنوع از برندهای معتبر، تجربه‌ای لذت‌بخش از خرید آنلاین را برای شما فراهم می‌کنیم. </p>
-    </div>
-    <div class="two">
-        <div class="hidden-content">
-            <p>در دنیزتچ، شما می‌توانید جدیدترین مدل‌های موبایل، هدفون، پاوربانک، قاب و سایر لوازم جانبی را با گارانتی اصلی و خدمات پس از فروش معتبر خریداری کنید.</p>
-        </div>
-        <span class="show-more" onclick="toggleMore(this)">مشاهده بیشتر <img src="img/faq/down-arrow-5-svgrepo-com.svg" class="arrow" /></span>
-    </div>
-    <div class="faq">
-        <h3>سوالات متداول</h3>
-        <div>
-            <h4 onclick="toggleFaq('faq1')"> دنیزتچ چیست؟ </h4>
-            <p id="faq1" class="faq-content"> دنیزتچ یک فروشگاه آنلاین تخصصی در زمینه موبایل و لوازم جانبی است که با استفاده از فناوری‌های روز وب طراحی شده است. </p>
-        </div>
-        <div>
-            <h4 onclick="toggleFaq('faq2')"> آیا محصولات دنیزتچ گارانتی دارند؟ </h4>
-            <p id="faq2" class="faq-content">بله، تمامی محصولات دنیزتچ دارای گارانتی اصلی و خدمات پس از فروش معتبر هستند.</p>
-        </div>
-        <div>
-            <h4 onclick="toggleFaq('faq3')">چرا از دنیزتچ خرید کنم؟</h4>
-            <p id="faq3" class="faq-content"> دنیزتچ با تضمین بهترین قیمت، کیفیت بالا و تحویل سریع، بهترین انتخاب برای خرید موبایل و لوازم جانبی است.</p>
-        </div>
-    </div>
-</div>
-
+</section>
 
 
 <div class="header-section">
@@ -931,9 +522,8 @@
 
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/demo-1.js"></script>
+<script src="js/demo-2.js"></script>
 
 </body>
 </html>
