@@ -1,50 +1,406 @@
-<!-- HTML (راست چین شده و فارسی) --><!DOCTYPE html><html lang=fa><head><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>صفحه پروفایل</title><link rel=stylesheet href="css/profile.css"><link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></head><body><div class=container><aside class=sidebar><ul><li id=dashboard-btn class=active><img src="img/profile icon/profile-svgrepo-com.svg"/></li><li id=profile-btn><img src="img/profile icon/edit-profile-svgrepo-com.svg"/></li><li id=moneybag-btn><img src="img/profile icon/wallet-svgrepo-com.svg"/></li><li id=buy-btn><img src="img/profile icon/sell-svgrepo-com.svg"/></li><li id=message-btn><img src="img/profile icon/message-square-dots-svgrepo-com.svg"/></li><li id=setting-btn><img src="img/profile icon/logout-svgrepo-com.svg"/></li></ul></aside><main class=content><header class=header><div class=mobile><h2>خوش آمدید </h2><span>سه‌شنبه، 07 ژوئن 2022</span></div><div class=search-box><input type=text placeholder="جستجو"><i class="fas fa-search"></i></div><div class=notification><img src="img/profile icon/bell-svgrepo-com.svg" class=bell><img src="img/profile/profile.jpg" alt="پروفایل"></div></header><section id=dashboard-section><!-- Dashboard Boxes --><div class=dashboard-boxes><div class="dashboard-box box-orders"><h3>سفارشات فعال</h3><p>5 سفارش</p></div><div class="dashboard-box box-total"><h3>مبلغ کل خریدها</h3><p>35,000,000 تومان</p></div><div class="dashboard-box box-loyalty"><h3>امتیاز وفاداری</h3><p>1200 امتیاز</p></div></div><!-- Recent Orders Table --><div class=recent-orders><h3>سفارشات اخیر</h3><table><thead><tr><th>سفارش</th><th>کد سفارش</th><th>تاریخ</th><th>مبلغ</th><th>وضعیت</th></tr></thead><tbody><tr><td>سفارش 1</td><td>#12345</td><td>1403/12/01</td><td>3,500,000 تومان</td><td class=status-delivered>تحویل داده شده</td></tr><tr><td>سفارش 2</td><td>#12346</td><td>1403/12/03</td><td>5,000,000 تومان</td><td class=status-shipping>در حال ارسال</td></tr><tr><td>سفارش 3</td><td>#12347</td><td>1403/12/04</td><td>2,000,000 تومان</td><td class=status-pending>در انتظار ارسال</td></tr></tbody></table></div></section><section id=profile-section style="display:none;"><div class=profile-card><img src="img/profile/profile.jpg" alt="کاربر"><div class=info><h3>الکسا راولز</h3><p>alexarawles@gmail.com</p></div><button class=edit-btn>ویرایش</button></div><div class=form-container><div class=form-group><label>نام کامل</label><input type=text placeholder="نام شما" disabled></div><div class=form-group><label> ایمیل </label><input type=email placeholder=" ایمیل شما " disabled></div><div class=form-group><label> شماره موبایل </label><input type=phone placeholder=" شماره موبایل شما " disabled></div><div class=form-group><label> رمز عبور </label><input type=password placeholder=" رمز عبور شما" disabled></div><div class=form-group><label> کدملی </label><input type=text placeholder=" کدملی شما " disabled></div><div class=form-group><label> تاریخ تولد </label><input type=text placeholder=" تاریخ تولد شما " disabled></div><div class=form-group><label> پست </label><input type=text placeholder=" کد پست شما " disabled></div><div class=form-group><label> آدرس </label><input type=text placeholder=" آدرس شما " disabled></div></div><div class=email-section><h3>آدرس ایمیل من</h3><div class=email-box><i class="fas fa-envelope"></i><div><p>alexarawles@gmail.com</p><span>1 ماه پیش</span></div></div><button class=add-email-btn>+ افزودن آدرس ایمیل</button></div><!-- Modal --><div id=editModal class=modal style="display:none;"><div class=modal-content><h3>ویرایش اطلاعات</h3><div class=form-group><label>نام کامل</label><input type=text id=fullNameInput></div><div class=form-group><label>ایمیل</label><input type=email id=emailInput></div><div class=form-group><label>شماره موبایل</label><input type=text id=phoneInput></div><div class=form-group><label>رمز عبور</label><input type=password id=passwordInput></div><div class=form-group><label>کدملی</label><input type=text id=nationalCodeInput></div><div class=form-group><label>تاریخ تولد</label><input type=text id=birthdateInput></div><div class=form-group><label>کد پستی</label><input type=text id=postalCodeInput></div><div class=form-group><label>آدرس</label><input type=text id=addressInput></div><button onclick="saveProfile()">ثبت</button><button onclick="closeModal()">بستن</button></div></div></section><section id=moneybag-section><div class=all><div class=wallet-info><h3>موجودی کیف پول</h3><p class=balance>موجودی فعلی: ۰ تومان</p></div><div class=wallet-topup><h3>افزایش موجودی کیف پول</h3><label>مبلغ به تومان (حداقل ۵ هزار تومان)</label><input type=number min=5000><label>انتخاب درگاه پرداخت</label><select><option>بانک ملی</option><option> زرین پال </option><option>بانک صادرات </option></select><button class=topup-btn>پرداخت و افزایش موجودی</button></div><div class=transaction-history><h3>تاریخچه تراکنش‌های شما</h3><table><thead><tr><th>تاریخ</th><th>مبلغ</th><th>درگاه پرداخت</th><th>کد پیگیری</th><th>وضعیت</th></tr></thead><tbody><tr><td>۱۴۰۳/۴/۲۵ - ۲۰:۱۹</td><td>۲,۰۰۰,۰۰۰ تومان</td><td>زیبال</td><td>----</td><td class=failed>ناموفق</td></tr></tbody></table></div></div></section><section id=buy-section><h2 class=section-title>سفارشات من</h2><div class=container><div class=orders><div class=card><img src="img/first page/airpad iphone.jpeg" alt="محصول ۱" class=product-img><h3 class=product-name>هدفون بلوتوثی مدل XYZ</h3><p class=order-date>تاریخ: ۱۴۰۲/۱۲/۱۰</p><p class=order-price>قیمت: ۲,۵۰۰,۰۰۰ تومان</p><span class="order-status delivered">تحویل داده شده</span><button class=order-btn>جزئیات بیشتر</button></div><div class=card><img src="img/first page/samsung mohafez.jpeg" alt="محصول ۲" class=product-img><h3 class=product-name>گوشی موبایل مدل ABC</h3><p class=order-date>تاریخ: ۱۴۰۲/۱۲/۱۲</p><p class=order-price>قیمت: ۱۸,۰۰۰,۰۰۰ تومان</p><span class="order-status pending">در حال انتظار</span><button class=order-btn>جزئیات بیشتر</button></div><div class=card><img src="img/first page/cable.jpeg" alt="محصول ۳" class=product-img><h3 class=product-name>شارژر فست 65W</h3><p class=order-date>تاریخ: ۱۴۰۲/۱۲/۱۵</p><p class=order-price>قیمت: ۸۵۰,۰۰۰ تومان</p><span class="order-status shipped">ارسال شده</span><button class=order-btn>جزئیات بیشتر</button></div><div class=card><img src="img/first page/powerbank xiaomi.jpeg" alt="محصول ۴" class=product-img><h3 class=product-name>پاوربانک ۲۰۰۰۰ میلی‌آمپر</h3><p class=order-date>تاریخ: ۱۴۰۲/۱۲/۱۸</p><p class=order-price>قیمت: ۱,۵۰۰,۰۰۰ تومان</p><span class="order-status delivered">تحویل داده شده</span><button class=order-btn>جزئیات بیشتر</button></div><div class=card><img src="img/first page/bi sim samsung.jpeg" alt="محصول ۵" class=product-img><h3 class=product-name>شارژر بی‌سیم مدل DEF</h3><p class=order-date>تاریخ: ۱۴۰۲/۱۲/۲۰</p><p class=order-price>قیمت: ۱,۲۰۰,۰۰۰ تومان</p><span class="order-status pending">در حال انتظار</span><button class=order-btn>جزئیات بیشتر</button></div></div></div></section><section id=message-section><div class=card><svg class=wave viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path
-d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
-fill-opacity=1
-></path></svg><div class=icon-container><svg
-xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 512 512"
-stroke-width=0
-fill=currentColor
-stroke=currentColor
-class=icon
-><path
-d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"
-></path></svg></div><div class=message-text-container><p class=message-text>Success message</p><p class=sub-text>Everything seems great</p></div><svg
-xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 15 15"
-stroke-width=0
-fill=none
-stroke=currentColor
-class=cross-icon
-><path
-fill=currentColor
-d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
-clip-rule=evenodd
-fill-rule=evenodd
-></path></svg></div><div class=card><svg class=wave viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path
-d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
-fill-opacity=1
-></path></svg><div class=icon-container><svg
-xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 24 24"
-stroke-width=0
-fill=currentColor
-stroke=currentColor
-class=icon><path
-d="M13 7.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-3 3.75a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v4.25h.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5h.75V12h-.75a.75.75 0 0 1-.75-.75Z"
-></path><path
-d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
-></path></svg></div><div class=message-text-container><p class=message-text>Info message</p><p class=sub-text>You just should know this</p></div><svg
-xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 15 15"
-stroke-width=0
-fill=none
-stroke=currentColor
-class=cross-icon
-><path
-fill=currentColor
-d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
-clip-rule=evenodd
-fill-rule=evenodd
-></path></svg></div></section><section id=setting-section class=delete-account><div class=delete-container><p class=warning-text>آیا مطمئن هستید که می‌خواهید حساب خود را حذف کنید؟ !</p><button class=delete-btn>حذف حساب کاربری</button></div></section></main></div><script src="js/profile.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه پروفایل</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="img/favicon/favicon.png" rel="icon">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li id="dashboard-btn" class="active"><img src="img/profile icon/profile-svgrepo-com.svg"/> </li>
+                <li id="profile-btn"><img src="img/profile icon/edit-profile-svgrepo-com.svg"/> </li>
+                <li id="moneybag-btn"><img src="img/profile icon/wallet-svgrepo-com.svg"/></li>
+                <li id="buy-btn"> <img src="img/profile icon/sell-svgrepo-com.svg"/></li>
+                <li id="message-btn"><img src="img/profile icon/message-square-dots-svgrepo-com.svg"/></li>
+                <li id="setting-btn"><img src="img/profile icon/logout-svgrepo-com.svg"/></li>
+
+            </ul>
+        </aside>        
+
+        <main class="content">
+            <header class="header">
+                <div class="mobile">
+                    <h2>خوش آمدید </h2>
+                    <span>سه‌شنبه، 07 ژوئن 2022</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="جستجو">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="notification">
+                    <img src="img/profile icon/bell-svgrepo-com.svg" class="bell">
+                    <img src="img/profile/profile.jpg" alt="پروفایل">
+                </div>
+            </header>
+
+
+            <section id="dashboard-section">
+                <!-- Dashboard Boxes -->
+                <div class="dashboard-boxes">
+                    <div class="dashboard-box box-orders">
+                        <h3>سفارشات فعال</h3>
+                        <p>5 سفارش</p>
+                    </div>
+                    <div class="dashboard-box box-total">
+                        <h3>مبلغ کل خریدها</h3>
+                        <p>35,000,000 تومان</p>
+                    </div>
+                    <div class="dashboard-box box-loyalty">
+                        <h3>امتیاز وفاداری</h3>
+                        <p>1200 امتیاز</p>
+                    </div>
+                </div>
+            
+                <!-- Recent Orders Table -->
+                <div class="recent-orders">
+                    <h3>سفارشات اخیر</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>سفارش</th>
+                                <th>کد سفارش</th>
+                                <th>تاریخ</th>
+                                <th>مبلغ</th>
+                                <th>وضعیت</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>سفارش 1</td>
+                                <td>#12345</td>
+                                <td>1403/12/01</td>
+                                <td>3,500,000 تومان</td>
+                                <td class="status-delivered">تحویل داده شده</td>
+                            </tr>
+                            <tr>
+                                <td>سفارش 2</td>
+                                <td>#12346</td>
+                                <td>1403/12/03</td>
+                                <td>5,000,000 تومان</td>
+                                <td class="status-shipping">در حال ارسال</td>
+                            </tr>
+                            <tr>
+                                <td>سفارش 3</td>
+                                <td>#12347</td>
+                                <td>1403/12/04</td>
+                                <td>2,000,000 تومان</td>
+                                <td class="status-pending">در انتظار ارسال</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <section id="profile-section" style="display: none;">
+                <div class="profile-card">
+                    <img src="img/profile/profile.jpg" alt="کاربر">
+                    <div class="info">
+                        <h3>الکسا راولز</h3>
+                        <p>alexarawles@gmail.com</p>
+                    </div>
+                    <button class="edit-btn">ویرایش</button>
+                </div>
+
+                <div class="form-container">
+                    <div class="form-group">
+                        <label>نام کامل</label>
+                        <input type="text" placeholder="نام شما" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> ایمیل </label>
+                        <input type="email" placeholder=" ایمیل شما " disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> شماره موبایل </label>
+                        <input type="phone" placeholder=" شماره موبایل شما " disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> رمز عبور </label>
+                        <input type="password" placeholder=" رمز عبور شما" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> کدملی </label>
+                        <input type="text" placeholder=" کدملی شما " disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> تاریخ تولد </label>
+                        <input type="text" placeholder=" تاریخ تولد شما " disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> پست </label>
+                        <input type="text" placeholder=" کد پست شما " disabled>
+                    </div>
+                    <div class="form-group">
+                        <label> آدرس </label>
+                        <input type="text" placeholder=" آدرس شما " disabled>
+                    </div>
+                </div>
+
+                <div class="email-section">
+                    <h3>آدرس ایمیل من</h3>
+                    <div class="email-box">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>alexarawles@gmail.com</p>
+                            <span>1 ماه پیش</span>
+                        </div>
+                    </div>
+                    <button class="add-email-btn">+ افزودن آدرس ایمیل</button>
+                </div>
+
+                <!-- Modal -->
+                <div id="editModal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <h3>ویرایش اطلاعات</h3>
+                        <div class="form-group">
+                            <label>نام کامل</label>
+                            <input type="text" id="fullNameInput">
+                        </div>
+                        <div class="form-group">
+                            <label>ایمیل</label>
+                            <input type="email" id="emailInput">
+                        </div>
+                        <div class="form-group">
+                            <label>شماره موبایل</label>
+                            <input type="text" id="phoneInput">
+                        </div>
+                        <div class="form-group">
+                            <label>رمز عبور</label>
+                            <input type="password" id="passwordInput">
+                        </div>
+                        <div class="form-group">
+                            <label>کدملی</label>
+                            <input type="text" id="nationalCodeInput">
+                        </div>
+                        <div class="form-group">
+                            <label>تاریخ تولد</label>
+                            <input type="text" id="birthdateInput">
+                        </div>
+                        <div class="form-group">
+                            <label>کد پستی</label>
+                            <input type="text" id="postalCodeInput">
+                        </div>
+                        <div class="form-group">
+                            <label>آدرس</label>
+                            <input type="text" id="addressInput">
+                        </div>
+                        <button onclick="saveProfile()">ثبت</button>
+                        <button onclick="closeModal()">بستن</button>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="moneybag-section">
+                <div class="all">   
+                    <div class="wallet-info">
+                        <h3>موجودی کیف پول</h3>
+                        <p class="balance">موجودی فعلی: ۰ تومان</p>
+                    </div>
+                    
+                    <div class="wallet-topup">
+                        <h3>افزایش موجودی کیف پول</h3>
+                        <label>مبلغ به تومان (حداقل ۵ هزار تومان)</label>
+                        <input type="number" min="5000">
+                        
+                        <label>انتخاب درگاه پرداخت</label>
+                        <select>
+                            <option>بانک ملی</option>
+                            <option> زرین پال </option>
+                            <option>بانک  صادرات </option>
+                        </select>
+                        
+                        <button class="topup-btn">پرداخت و افزایش موجودی</button>
+                    </div>
+                    
+                    <div class="transaction-history">
+                        <h3>تاریخچه تراکنش‌های شما</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>تاریخ</th>
+                                    <th>مبلغ</th>
+                                    <th>درگاه پرداخت</th>
+                                    <th>کد پیگیری</th>
+                                    <th>وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>۱۴۰۳/۴/۲۵ - ۲۰:۱۹</td>
+                                    <td>۲,۰۰۰,۰۰۰ تومان</td>
+                                    <td>زیبال</td>
+                                    <td>----</td>
+                                    <td class="failed">ناموفق</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </section>
+            
+            
+            <section id="buy-section">
+                <h2 class="section-title">سفارشات من</h2>
+                <div class="container">
+                    <div class="orders">
+                        <div class="card">
+                            <img src="img/first page/airpad iphone.jpeg" alt="محصول ۱" class="product-img">
+                            <h3 class="product-name">هدفون بلوتوثی مدل XYZ</h3>
+                            <p class="order-date">تاریخ: ۱۴۰۲/۱۲/۱۰</p>
+                            <p class="order-price">قیمت: ۲,۵۰۰,۰۰۰ تومان</p>
+                            <span class="order-status delivered">تحویل داده شده</span>
+                            <button class="order-btn">جزئیات بیشتر</button>
+                        </div>
+                        <div class="card">
+                            <img src="img/first page/samsung mohafez.jpeg" alt="محصول ۲" class="product-img">
+                            <h3 class="product-name">گوشی موبایل مدل ABC</h3>
+                            <p class="order-date">تاریخ: ۱۴۰۲/۱۲/۱۲</p>
+                            <p class="order-price">قیمت: ۱۸,۰۰۰,۰۰۰ تومان</p>
+                            <span class="order-status pending">در حال انتظار</span>
+                            <button class="order-btn">جزئیات بیشتر</button>
+                        </div>
+                        <div class="card">
+                            <img src="img/first page/cable.jpeg" alt="محصول ۳" class="product-img">
+                            <h3 class="product-name">شارژر فست 65W</h3>
+                            <p class="order-date">تاریخ: ۱۴۰۲/۱۲/۱۵</p>
+                            <p class="order-price">قیمت: ۸۵۰,۰۰۰ تومان</p>
+                            <span class="order-status shipped">ارسال شده</span>
+                            <button class="order-btn">جزئیات بیشتر</button>
+                        </div>
+                        <div class="card">
+                            <img src="img/first page/powerbank xiaomi.jpeg" alt="محصول ۴" class="product-img">
+                            <h3 class="product-name">پاوربانک ۲۰۰۰۰ میلی‌آمپر</h3>
+                            <p class="order-date">تاریخ: ۱۴۰۲/۱۲/۱۸</p>
+                            <p class="order-price">قیمت: ۱,۵۰۰,۰۰۰ تومان</p>
+                            <span class="order-status delivered">تحویل داده شده</span>
+                            <button class="order-btn">جزئیات بیشتر</button>
+                        </div>
+                        <div class="card">
+                            <img src="img/first page/bi sim samsung.jpeg" alt="محصول ۵" class="product-img">
+                            <h3 class="product-name">شارژر بی‌سیم مدل DEF</h3>
+                            <p class="order-date">تاریخ: ۱۴۰۲/۱۲/۲۰</p>
+                            <p class="order-price">قیمت: ۱,۲۰۰,۰۰۰ تومان</p>
+                            <span class="order-status pending">در حال انتظار</span>
+                            <button class="order-btn">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="message-section">
+
+            <div class="card">
+                <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
+                    fill-opacity="1"
+                ></path>
+                </svg>
+            
+                <div class="icon-container">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    stroke-width="0"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    class="icon"
+                >
+                    <path
+                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"
+                    ></path>
+                </svg>
+                </div>
+                <div class="message-text-container">
+                <p class="message-text">Success message</p>
+                <p class="sub-text">Everything seems great</p>
+                </div>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 15 15"
+                stroke-width="0"
+                fill="none"
+                stroke="currentColor"
+                class="cross-icon"
+                >
+                <path
+                    fill="currentColor"
+                    d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                ></path>
+                </svg>
+            </div>
+
+            <div class="card">
+                <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
+                    fill-opacity="1"
+                ></path>
+                </svg>
+            
+                <div class="icon-container">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke-width="0"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    class="icon">
+                    <path
+                    d="M13 7.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-3 3.75a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v4.25h.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5h.75V12h-.75a.75.75 0 0 1-.75-.75Z"
+                    ></path>
+                    <path
+                    d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"
+                    ></path>
+                </svg>
+                </div>
+                <div class="message-text-container">
+                <p class="message-text">Info message</p>
+                <p class="sub-text">You just should know this</p>
+                </div>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 15 15"
+                stroke-width="0"
+                fill="none"
+                stroke="currentColor"
+                class="cross-icon"
+                >
+                <path
+                    fill="currentColor"
+                    d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                ></path>
+                </svg>
+            </div>
+  
+            </section>
+
+            
+            <section id="setting-section" class="delete-account">
+                <div class="delete-container">
+                    <p class="warning-text">آیا مطمئن هستید که می‌خواهید حساب خود را حذف کنید؟ !</p>
+                    <button class="delete-btn">حذف حساب کاربری</button>
+                </div>
+            </section>
+
+
+            
+        </main>
+    </div>
+
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
